@@ -13,7 +13,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	  { -- LSP Configuration & Plugins
+  {
+    "catppuccin/nvim",
+    name = "catppuccin"
+  },
+  { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
       -- Automatically install LSPs to stdpath for neovim
@@ -53,8 +57,4 @@ require("lazy").setup({
     }
   },
   'numToStr/Comment.nvim',
-  {
-    "catppuccin/nvim",
-    name = "catppuccin"
-  },
 })

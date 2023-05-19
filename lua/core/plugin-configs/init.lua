@@ -1,7 +1,0 @@
-require('core.plugin-configs.lualine')
-require('core.plugin-configs.telescope')
-require('core.plugin-configs.comment')
-require('core.plugin-configs.mason')
-require('core.plugin-configs.lsp')
-require('core.plugin-configs.treesitter')
-require('core.plugin-configs.completions')

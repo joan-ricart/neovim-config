@@ -1,4 +1,5 @@
-require("core.keymaps")
-require("core.plugins")
-require("core.plugin-configs")
-require("core.colorscheme")
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+require('yung.config')
+require('yung')

@@ -3,19 +3,19 @@ return {
         "catppuccin/nvim",
         name = "catppuccin",
         config = function()
-            vim.cmd.colorscheme "catppuccin"
-        end
+            vim.cmd.colorscheme("catppuccin")
+        end,
     },
     {
         "nvim-lualine/lualine.nvim",
         dependencies = {
-            "nvim-tree/nvim-web-devicons"
+            "nvim-tree/nvim-web-devicons",
         },
         config = function()
-            require('lualine').setup({
-                options = { theme = "catppuccin" }
+            require("lualine").setup({
+                options = { theme = "catppuccin" },
             })
-        end
+        end,
     },
     {
         "folke/which-key.nvim",
@@ -24,5 +24,5 @@ return {
             vim.o.timeoutlen = 300
             require("which-key").setup()
         end,
-    }
+    },
 }

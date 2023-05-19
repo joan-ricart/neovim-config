@@ -4,30 +4,31 @@ return {
         build = ":MasonUpdate", -- :MasonUpdate updates registry contents
         config = function()
             require("mason").setup()
-        end
+        end,
     },
     {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "intelephense" }
+                ensure_installed = { "lua_ls", "intelephense", "gopls" },
             })
-        end
+        end,
     },
     {
         "neovim/nvim-lspconfig",
         config = function()
-            require("lspconfig").lua_ls.setup {
+            require("lspconfig").lua_ls.setup({
                 settings = {
                     Lua = {
                         diagnostics = {
                             -- Get the language server to recognize the `vim` global
-                            globals = {'vim'},
+                            globals = { "vim" },
                         },
                     },
                 },
-            }
-            require("lspconfig").intelephense.setup {}
-        end
-    }
+            })
+            require("lspconfig").intelephense.setup({})
+            require("lspconfig").gopls.setup({})
+        end,
+    },
 }

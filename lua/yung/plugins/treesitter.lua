@@ -3,10 +3,10 @@ return {
     lazy = false,
     build = ":TSUpdate",
     config = function()
-        require("nvim-treesitter.configs").setup{
-            ensure_installed = {"go", "lua", "javascript", "typescript", "php"},
+        require("nvim-treesitter.configs").setup({
+            ensure_installed = { "go", "lua", "javascript", "typescript", "php" },
             highlight = {
-                enable = true
+                enable = true,
             },
             incremental_selection = {
                 enable = true,
@@ -18,9 +18,8 @@ return {
                 },
             },
             indent = {
-                enable = true
-            }
-        }
-    end
-
+                enable = true,
+            },
+        })
+    end,
 }

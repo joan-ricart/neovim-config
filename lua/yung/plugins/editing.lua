@@ -59,6 +59,9 @@ return {
 			require("null-ls").setup({
 				sources = {
 					format.stylua,
+					format.gofumpt,
+					format.goimports,
+					format.goimports_reviser,
 				},
 
 				-- you can reuse a shared lspconfig on_attach callback here

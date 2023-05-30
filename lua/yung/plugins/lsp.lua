@@ -10,7 +10,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "intelephense", "gopls" },
+				ensure_installed = { "lua_ls", "intelephense", "gopls", "tsserver", "tailwindcss" },
 			})
 		end,
 	},
@@ -29,6 +29,8 @@ return {
 			})
 			require("lspconfig").intelephense.setup({})
 			require("lspconfig").gopls.setup({})
+			require("lspconfig").tsserver.setup({})
+			require("lspconfig").tailwindcss.setup({})
 
 			-- Global mappings.
 			-- See `:help vim.diagnostic.*` for documentation on any of the below functions
